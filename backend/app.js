@@ -1,7 +1,6 @@
 import express from  "express";
 import postRoutes from "./routes/post.js";
 import authRoutes from "./routes/auth.js";
-import userRoutes from "./routes/user.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
 const app=express()
@@ -26,7 +25,6 @@ app.post("/api/upload",upload.single('file'),function(req,res){
 
 app.use("/api/posts",postRoutes);
 app.use("/api/auth",authRoutes);
-app.use("/api/users",userRoutes);
 
 
 
